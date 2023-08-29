@@ -17,25 +17,26 @@
     <div class="govuk-grid-column-two-thirds">
 
       <!-- <h1 class="govuk-heading-l">
-        Target audience
+        Heading or question goes here
       </h1> -->
 
-      <form class="form" action="/project-scope" method="post">
+      <form class="form" action="/stakeholders" method="post">
 
         {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
         {{ govukTextarea({
-          name: "target-audience",
-          id: "target-audience",
+          name: "accessibility",
+          id: "accessibility",
           label: {
-            text: "Target audience",
+            text: "Accessibility and Inclusivity",
             classes: "govuk-label--l",
             isPageHeading: true
           },
           hint: {
-            text: "Who is the primary target audience or user base for this project?"
+            text: "Are there any specific accessibility or inclusivity requirements that the design should meet?"
           }
         }) }}
+        
 
         {{ govukButton({
           text: "Continue"
